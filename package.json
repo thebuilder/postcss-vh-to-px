@@ -1,0 +1,37 @@
+{
+  "name": "postcss-vh-to-px",
+  "version": "0.1.0",
+  "description": "PostCSS plugin to replace viewport height units and replace them with fixed pixels.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "viewport",
+    "units",
+    "replace"
+  ],
+  "author": "Daniel Schmidt <dsc@insilico.dk>",
+  "license": "MIT",
+  "repository": "thebuilder/postcss-vh-to-px",
+  "bugs": {
+    "url": "https://github.com/thebuilder/postcss-vh-to-px/issues"
+  },
+  "homepage": "https://github.com/thebuilder/postcss-vh-to-px",
+  "dependencies": {
+    "postcss": "^5.2.6"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "eslint-config-postcss": "^2.0.2",
+    "jest": "^18.0.0"
+  },
+  "scripts": {
+    "test": "jest && eslint *.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-postcss/es5",
+    "env": {
+      "jest": true
+    }
+  }
+}

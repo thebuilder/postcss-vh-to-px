@@ -20,6 +20,14 @@
 }
 ```
 
+## Why
+
+The reason this plugin exists, is to allow our CSS files to work inside the EPIServer CMS system. It has an [issue](http://world.episerver.com/support/Bug-list/Bug/?bugId=CMS-1503), that breaks the view if the css contains `vh` units.
+It uses an iframe that gets resized to fit the height of all its content. But css viewport units are based on the size of the containing viewport, which in this case is the iframe. It would go into an infinite loop where it keeps resizing itself.
+
+Converting all our `vh` units to `px` inside the CMS fixes the issue, while allowing us to still use `vh` in our css.
+
+
 ## Usage
 
 ```js

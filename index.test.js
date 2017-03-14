@@ -17,3 +17,7 @@ it('Converts viewport height to px', () => {
 it('Handles the unitSize option', () => {
     return run('a{ height: 100vh }', 'a{ height: 500px }', { unitSize: 5 });
 });
+
+it('Handles the decimals', () => {
+    return run('a{ height: 10.1vh }', 'a{ height: 50.5px }', { unitSize: 5 });
+});

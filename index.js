@@ -3,12 +3,12 @@ const defaults = {
     unitSize: 6.67
 };
 
-module.exports = postcss.plugin('PLUGIN_NAME', (opts) => {
+module.exports = postcss.plugin('postcss-vh-to-px', (opts) => {
     const options = Object.assign({}, defaults, opts);
 
     return (root) => {
-        root.replaceValues(/\d+vh/g, { fast: 'vh' }, val => {
-            return options.unitSize * parseInt(val) + 'px';
+        root.replaceValues(/[\d.]+vh/g, { fast: 'vh' }, val => {
+            return options.unitSize * parseFloat(val) + 'px';
         });
     };
 });

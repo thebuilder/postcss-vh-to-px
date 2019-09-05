@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/thebuilder/postcss-vh-to-px",
   "dependencies": {
-    "postcss": "^6.0.13"
+    "postcss": "^7.0.18"
   },
   "devDependencies": {
     "eslint": "^3.12.2",
